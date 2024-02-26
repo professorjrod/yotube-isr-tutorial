@@ -19,12 +19,14 @@ export default function BlogPosts({ posts }) {
       </div>
       <div>
         {posts.map((post) => {
-          <div id={post.id}>
-            <p>{post.title}</p>
-            <p>Author: {post.author}</p>
-            <p>Industry: {post.industry}</p>
-            <p>{post.content}</p>
-          </div>;
+          return (
+            <div id={post.id}>
+              <p>{post.title}</p>
+              <p>Author: {post.author}</p>
+              <p>Industry: {post.industry}</p>
+              <p>{post.content}</p>
+            </div>
+          );
         })}
       </div>
     </>
